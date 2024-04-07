@@ -1,13 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import WelcomeScreen from './src/screens/WelcomeScreen/WelcomeScreen'
+import React from 'react';
+import MainNavigation from './src/services/navigations/MainNavigation';
 
 const App = () => {
   return (
     <>
-      <WelcomeScreen />
+      <MainNavigation />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
