@@ -9,9 +9,10 @@ const AppStackNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName="Login">
+      initialRouteName="Signup">
       <Stack.Screen name="Welcome" component={Screen.WelcomeScreen} />
       <Stack.Screen name="Login" component={Screen.LoginScreen} />
+      <Stack.Screen name="Signup" component={Screen.SignupScreen} />
     </Stack.Navigator>
   );
 };

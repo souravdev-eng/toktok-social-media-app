@@ -1,23 +1,22 @@
 import {
-  Image,
   View,
-  TextInput,
   SafeAreaView,
+  TextInput,
   TouchableOpacity,
+  Image,
   TouchableWithoutFeedback,
 } from 'react-native';
 import React, {useState} from 'react';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {Button, Text} from '../../components';
-import styles from './LoginScreen.styles';
-
 import theme from '../../theme';
+import {Button, Text} from '../../components';
+import styles from './SignupScreen.styles';
 import {IMAGE} from '../../assets';
 
 const {colors} = theme;
 
-const LoginScreen = () => {
+const SignupScreen = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [passwordError, setPasswordError] = useState<boolean>(true);
@@ -35,10 +34,11 @@ const LoginScreen = () => {
         style={{
           paddingHorizontal: 20,
           backgroundColor: 'white',
+          height: '100%',
         }}>
         <View style={{width: '40%', marginTop: 30}}>
           <Text size="h1" style={{fontWeight: '600'}}>
-            Login to your Account
+            Create your Account
           </Text>
         </View>
         <View style={{top: 50}}>
@@ -86,22 +86,10 @@ const LoginScreen = () => {
             </View>
           </View>
           <Button
-            title="Sign in"
+            title="Sign up"
             onPress={() => {}}
             style={{marginTop: 25, marginBottom: 12}}
           />
-
-          <TouchableOpacity style={{marginTop: 10}}>
-            <Text
-              size="h5"
-              style={{
-                color: colors.primaryDark,
-                fontWeight: '500',
-                textAlign: 'center',
-              }}>
-              Forgot the password?
-            </Text>
-          </TouchableOpacity>
 
           <View
             style={{
@@ -175,7 +163,7 @@ const LoginScreen = () => {
                 fontWeight: '500',
                 textAlign: 'center',
               }}>
-              Don't have an account?{' '}
+              Already have an account?{' '}
               <TouchableWithoutFeedback>
                 <Text
                   size="h5"
@@ -183,7 +171,7 @@ const LoginScreen = () => {
                     color: colors.primaryDark,
                     marginTop: 2,
                   }}>
-                  Sign up
+                  Sign in
                 </Text>
               </TouchableWithoutFeedback>
             </Text>
@@ -194,4 +182,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default SignupScreen;

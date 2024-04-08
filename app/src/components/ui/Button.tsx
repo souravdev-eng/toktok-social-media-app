@@ -1,7 +1,7 @@
-import {Text, TouchableOpacity, StyleSheet, ViewStyle} from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, ViewStyle } from 'react-native';
 import React from 'react';
 import theme from '../../theme';
-const {colors} = theme;
+const { colors } = theme;
 
 interface ButtonProps {
   title: string;
@@ -9,7 +9,13 @@ interface ButtonProps {
   style?: ViewStyle;
 }
 
-const Button: React.FC<ButtonProps> = ({onPress, title, style}) => {
+/*
+TODO: 
+1. Need add a disable feature
+2. Add Loader in middle of buttons 
+*/
+
+const Button: React.FC<ButtonProps> = ({ onPress, title, style }) => {
   return (
     <TouchableOpacity
       style={[style, styles.container]}
